@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Memories 📸</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Our Beautiful Memories 📸💞</h1>
+    <p>Every picture holds a piece of my heart 🥺</p>
+
+    <div class="gallery">
+
+        <div class="polaroid fade-in">
+            <img src="images/img1.jpg" onclick="openLightbox(this.src)">
+            <p>The day I realized you are special 🌸</p>
+        </div>
+
+        <div class="polaroid fade-in">
+            <img src="images/img2.jpg" onclick="openLightbox(this.src)">
+            <p>My favorite smile in the world 💕</p>
+        </div>
+
+        <div class="polaroid fade-in">
+            <img src="images/img3.jpg" onclick="openLightbox(this.src)">
+            <p>We look too cute together 😌</p>
+        </div>
+
+        <div class="polaroid fade-in">
+            <img src="images/img4.jpg" onclick="openLightbox(this.src)">
+            <p>One of my happiest days 💫</p>
+        </div>
+
+        <div class="polaroid fade-in">
+            <img src="images/img5.jpg" onclick="openLightbox(this.src)">
+            <p>Forever my favorite person 💖</p>
+        </div>
+
+    </div>
+
+    <div class="button-group">
+        <button class="btn" onclick="startSlideshow()">Start Cute Slideshow 🎞</button>
+    
+        <a href="love.html">
+            <button class="btn">Final Surprise 💌</button>
+        </a>
+    </div>
+    
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightboxImg">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

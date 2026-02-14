@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+    <h1>Harshitha 💗</h1>
+    <h2>Together since January 18th, 2023</h2>
+    <div id="counter"></div>
+
+    <button onclick="showReason()">💘 Tell Me Why You Love Me</button>
+    <p id="loveReason"></p>
+</div>
+
+<script>
+const startDate = new Date("January 18, 2023 00:00:00").getTime();
+const counter = document.getElementById("counter");
+
+setInterval(() => {
+    const now = new Date().getTime();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    counter.innerHTML = `${days} Days 💖 ${hours}h ${minutes}m ${seconds}s`;
+}, 1000);
+
+const reasons = [
+"Because your smile fixes everything.",
+"Because you are my peace.",
+"Because you make life magical.",
+"Because loving you feels effortless.",
+"Because you are my forever."
+];
+
+function showReason() {
+    const random = Math.floor(Math.random() * reasons.length);
+    document.getElementById("loveReason").innerText = reasons[random];
+}
+</script>
+</body>
+</html>
